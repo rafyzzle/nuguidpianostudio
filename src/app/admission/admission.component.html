@@ -73,7 +73,8 @@
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="id_admission_phone"> Phone # </label>
-							<input type="tel" class="form-control" [mask]="'{+1} ([000]) [000] [0000]'" (maskFilled)=mf($event) placeholder="phone #"  formControlName="phone" name="admission_phone" required/>
+							<!-- <input type="tel" class="form-control" [mask]="'{+1} ([000]) [000] [0000]'" (maskFilled)=mf($event) placeholder="phone #"  formControlName="phone" name="admission_phone" required/> -->
+							<input type="tel" class="form-control" (maskFilled)=mf($event) placeholder="phone #"  formControlName="phone" name="admission_phone" required/>
 							<div class="invalid-feedback">
 								Please provide a valid phone number.
 							</div>

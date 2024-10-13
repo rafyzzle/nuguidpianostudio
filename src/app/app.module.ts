@@ -17,7 +17,7 @@ import { SnowDayPolicyComponent } from './snow-day-policy/snow-day-policy.compon
 import { AdminComponent } from './admin/admin.component';
 import { CurrentStudentsComponent } from './current-students/current-students.component';
 import { StateSelectComponent } from './state-select/state-select.component';
-import { InputMaskAngularModule } from 'input-mask-angular';
+// import { InputMaskAngularModule } from 'input-mask-angular';
 import { EventComponent } from './event/event.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LoginComponent } from './login/login.component';
@@ -44,7 +44,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    InputMaskAngularModule,
+   // InputMaskAngularModule,
     HttpClientModule
   ],
   providers: [],
