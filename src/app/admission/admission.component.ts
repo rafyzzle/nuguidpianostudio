@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormControl, UntypedFormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { HttpClient } from '@angular/common/http'
 
 import states from '../../assets/json/states.json'
@@ -76,5 +76,5 @@ export class AdmissionComponent implements OnInit {
     extracurr : [],
 })
 
- constructor(private fb : FormBuilder, private http : HttpClient) {}
+ constructor(private fb : UntypedFormBuilder, private http : HttpClient) {}
 }

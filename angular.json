@@ -124,7 +124,6 @@
       }
     }
   },
-  "defaultProject": "nuguidpianostudio",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"

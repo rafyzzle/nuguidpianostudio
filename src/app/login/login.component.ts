@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormControl, UntypedFormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service'
 
 @Component({
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 	serverRx : boolean = false;
 	loggedIn : boolean = false;
 
-	constructor(private fb : FormBuilder, private auth : AuthenticationService) {}
+	constructor(private fb : UntypedFormBuilder, private auth : AuthenticationService) {}
 	ngOnInit(): void {
 		this.auth.getLoginStatusObservable().subscribe({ next : x => this.loggedIn = x })
 	}
