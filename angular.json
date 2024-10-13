@@ -72,19 +72,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nuguidpianostudio:build",
-            "proxyConfig": "src/proxy.conf.json"
+            "proxyConfig": "src/proxy.conf.json",
+            "buildTarget": "nuguidpianostudio:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nuguidpianostudio:build:production"
+              "buildTarget": "nuguidpianostudio:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nuguidpianostudio:build"
+            "buildTarget": "nuguidpianostudio:build"
           }
         },
         "test": {
