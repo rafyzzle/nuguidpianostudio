@@ -13,7 +13,7 @@
 				<h6 class="alert-header"> We received your admission form. Thanks for the submission! </h6>
 			</div>
 			<div *ngIf="submitted && clientOK && srvRspRx && !serverOK" class="alert alert-warning alert-dismissible fade show mb-0">
-				<h6 class="alert-header"> The server is not responding properly.  Please try again later, or reach out via e-mail to horacio@nuguidpianostudio.com. </h6>
+				<h6 class="alert-header"> The server is not responding properly.  Please try again later, or reach out via e-mail to horacio&#64;nuguidpianostudio.com. </h6>
 				<button type="button" class="close" (click)="submitted = false" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="card-body overflow-auto h-100">
@@ -73,7 +73,8 @@
 						</div>
 						<div class="form-group col-sm-6">
 							<label for="id_admission_phone"> Phone # </label>
-							<input type="tel" class="form-control" [mask]="'{+1} ([000]) [000] [0000]'" (maskFilled)=mf($event) placeholder="phone #"  formControlName="phone" name="admission_phone" required/>
+							<!-- <input type="tel" class="form-control" [mask]="'{+1} ([000]) [000] [0000]'" (maskFilled)=mf($event) placeholder="phone #"  formControlName="phone" name="admission_phone" required/> -->
+							<input type="tel" class="form-control" (maskFilled)=mf($event) placeholder="phone #"  formControlName="phone" name="admission_phone" required/>
 							<div class="invalid-feedback">
 								Please provide a valid phone number.
 							</div>
