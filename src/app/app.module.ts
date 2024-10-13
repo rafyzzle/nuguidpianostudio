@@ -17,10 +17,10 @@ import { SnowDayPolicyComponent } from './snow-day-policy/snow-day-policy.compon
 import { AdminComponent } from './admin/admin.component';
 import { CurrentStudentsComponent } from './current-students/current-students.component';
 import { StateSelectComponent } from './state-select/state-select.component';
-// import { InputMaskAngularModule } from 'input-mask-angular';
 import { EventComponent } from './event/event.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LoginComponent } from './login/login.component';
+import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -41,5 +41,5 @@ import { LoginComponent } from './login/login.component';
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
-        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        ReactiveFormsModule, NgxMaskDirective, NgxMaskPipe], providers: [provideHttpClient(withInterceptorsFromDi()), provideEnvironmentNgxMask()] })
 export class AppModule { }
