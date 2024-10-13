@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -22,32 +22,24 @@ import { EventComponent } from './event/event.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LoginComponent } from './login/login.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HoracioComponent,
-    RosannaComponent,
-    HomeComponent,
-    EventsComponent,
-    AdmissionComponent,
-    HoracioCalendarComponent,
-    RosannaCalendarComponent,
-    SnowDayPolicyComponent,
-    AdminComponent,
-    CurrentStudentsComponent,
-    StateSelectComponent,
-    EventComponent,
-    CalendarComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-   // InputMaskAngularModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HoracioComponent,
+        RosannaComponent,
+        HomeComponent,
+        EventsComponent,
+        AdmissionComponent,
+        HoracioCalendarComponent,
+        RosannaCalendarComponent,
+        SnowDayPolicyComponent,
+        AdminComponent,
+        CurrentStudentsComponent,
+        StateSelectComponent,
+        EventComponent,
+        CalendarComponent,
+        LoginComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
